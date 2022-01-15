@@ -734,7 +734,7 @@ h6 {
 
 .main-block {
   background-image: url("../img/MainBlock/1.jpg");
-  margin: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
 }
 .main-block__container {
   display: flex;
@@ -949,87 +949,43 @@ h6 {
   }
 }
 
-.about__block {
-  padding: 40px 0px 0px 0px;
-  background-color: #151515;
-}
 .about__container {
+  text-align: center;
+}
+.about__body {
   display: flex;
-}
-.about__text {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  flex: 0 0 60%;
-}
-.about__text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #ad8330;
-}
-@media (min-width: 91.875em) {
-  .about__text::before {
-    width: 18.75rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 91.875em) {
-  .about__text::before {
-    width: clamp( 12.5rem , 10.7608695652rem  +  8.6956521739vw , 18.75rem );
-  }
-}
-@media (max-width: 20em) {
-  .about__text::before {
-    width: 12.5rem;
-  }
-}
-@media (min-width: 91.875em) {
-  .about__text::before {
-    height: 18.75rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 91.875em) {
-  .about__text::before {
-    height: clamp( 12.5rem , 10.7608695652rem  +  8.6956521739vw , 18.75rem );
-  }
-}
-@media (max-width: 20em) {
-  .about__text::before {
-    height: 12.5rem;
-  }
+  flex-direction: column-reverse;
 }
 .about__title {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  color: white;
-  font-weight: 900;
-  padding: 1.25em 1.25em 0px 1.25em;
-  margin: 0px 0px 80px 0px;
+  align-self: center;
+  color: black;
+  font-weight: 100;
+  letter-spacing: 5px;
+  padding: 0.625em 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
 }
 @media (min-width: 91.875em) {
   .about__title {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
 @media (min-width: 20em) and (max-width: 91.875em) {
   .about__title {
-    font-size: clamp( 2.5rem , 1.9434782609rem  +  2.7826086957vw , 4.5rem );
+    font-size: clamp( 2rem , 1.4434782609rem  +  2.7826086957vw , 4rem );
   }
 }
 @media (max-width: 20em) {
   .about__title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
-.about__title span {
-  padding: 0px 0px 0px 80px;
-  letter-spacing: 20px;
-}
 .about__description {
-  padding: 0px 30px 10px 30px;
-  color: white;
+  padding: 20px 30px 10px 30px;
+  color: black;
+  font-weight: 100;
+  line-height: 1.2;
+  text-align: left;
+  position: relative;
 }
 @media (min-width: 91.875em) {
   .about__description {
@@ -1038,22 +994,78 @@ h6 {
 }
 @media (min-width: 20em) and (max-width: 91.875em) {
   .about__description {
-    font-size: clamp( 1.5rem , 1.4304347826rem  +  0.347826087vw , 1.75rem );
+    font-size: clamp( 1.125rem , 0.9510869565rem  +  0.8695652174vw , 1.75rem );
   }
 }
 @media (max-width: 20em) {
   .about__description {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   }
 }
-.about__slider {
-  display: flex;
-  border-radius: 2%;
-  width: 60%;
+.about__description p {
+  margin: 0px 0px 10px 0px;
 }
-.about__slide img {
-  width: 50px;
+@media (max-width: 47.99875em) {
+  .about__description {
+    padding: 20px 0px 0px 0px;
+  }
+}
+.slider-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 91.875em) {
+  .slider-about {
+    height: 31.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 91.875em) {
+  .slider-about {
+    height: clamp( 12.5rem , 7.2826086957rem  +  26.0869565217vw , 31.25rem );
+  }
+}
+@media (max-width: 20em) {
+  .slider-about {
+    height: 12.5rem;
+  }
+}
+@media (min-width: 91.875em) {
+  .slider-about__body {
+    height: 31.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 91.875em) {
+  .slider-about__body {
+    height: clamp( 12.5rem , 7.2826086957rem  +  26.0869565217vw , 31.25rem );
+  }
+}
+@media (max-width: 20em) {
+  .slider-about__body {
+    height: 12.5rem;
+  }
+}
+.slider-about__slide {
   object-fit: cover;
+  object-position: center;
+}
+.slider-about__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-about__item-prev {
+  border: #C3C3C3 solid 1px;
+  width: 50%;
+  height: 60px;
+}
+.slider-about__item-next {
+  border: #C3C3C3 solid 1px;
+  width: 50%;
+  height: 60px;
+}
+.slider-about .top-photo {
+  align-self: flex-end;
 }
 .swiper {
   overflow: hidden;
@@ -1061,9 +1073,9 @@ h6 {
 
 .swiper-wrapper {
   width: 100%;
-  height: 100%;
   box-sizing: content-box;
   display: flex;
+  align-items: center;
   position: relative;
 }
 
@@ -1077,6 +1089,7 @@ h6 {
 
 .swiper-initialized .swiper-slide {
   flex-shrink: 0;
+  max-height: 400px;
 }
 
 .swiper-android .swiper-slide,
