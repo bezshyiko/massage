@@ -252,12 +252,20 @@ textarea {
 }
 
 .input {
-  border-radius: 0 !important;
+  border-radius: 5px !important;
+  height: 40px;
   width: 100%;
   display: block;
   padding: 0px 20px;
   border: 5px solid #eee;
 }
+.input._form-focus {
+  border: 2px solid #ad8330;
+}
+.input._form-error {
+  border: brown 2px solid;
+}
+
 textarea.input {
   resize: none;
   padding: 0px 0px;
@@ -381,7 +389,7 @@ body.popup-show::after {
   transform: scale(0);
   transition: transform 0.3s ease 0s;
   background-color: #eee;
-  padding: 20px;
+  padding: 25px;
   width: 100%;
   max-width: 900px;
   border-radius: 20px;
@@ -429,6 +437,10 @@ body.popup-show::after {
 .form__options {
   margin: 0px 0px 20px 0px;
 }
+.form__error {
+  color: brown;
+}
+
 [data-fullscreen] {
   min-height: 100vh;
 }
@@ -484,11 +496,52 @@ body.popup-show::after {
 .social {
   font-size: 1.75rem;
 }
-.social a {
-  transition: all 0.6s;
-}
 .social a:hover {
   color: #ad8330;
+}
+.social__facebook {
+  display: inline-block;
+  transform: translate(500px);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.8s ease;
+}
+.social__facebook._active {
+  display: inline-block;
+  transform: translate(0px);
+  opacity: 1;
+}
+.social__instagram {
+  display: inline-block;
+  transform: translate(500px);
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 1s ease;
+}
+.social__instagram._active {
+  display: inline-block;
+  transform: translate(0px);
+  opacity: 1;
+}
+.social__telegram {
+  display: inline-block;
+  transform: translate(500px);
+  opacity: 0;
+  transition: transform 1.1s ease, opacity 1.2s ease;
+}
+.social__telegram._active {
+  display: inline-block;
+  transform: translate(0px);
+  opacity: 1;
+}
+.social__viber {
+  display: inline-block;
+  transform: translate(500px);
+  opacity: 0;
+  transition: transform 1.3s ease, opacity 1.4s ease;
+}
+.social__viber._active {
+  display: inline-block;
+  transform: translate(0px);
+  opacity: 1;
 }
 
 .title {

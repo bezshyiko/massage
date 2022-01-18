@@ -159,7 +159,7 @@
               a = t[n - 1];
             return x([i, r], (s - a) * S(a, t[n]));
           }
-          function M(e, t, s, n) {
+          function L(e, t, s, n) {
             if (100 === n) return n;
             var i = T(n, e),
               r = e[i - 1],
@@ -172,7 +172,7 @@
               ? e[i - 1] + o(n - e[i - 1], t[i - 1])
               : n;
           }
-          var L, A;
+          var M, A;
           (e.PipsMode = void 0),
             ((A = e.PipsMode || (e.PipsMode = {})).Range = "range"),
             (A.Steps = "steps"),
@@ -180,10 +180,10 @@
             (A.Count = "count"),
             (A.Values = "values"),
             (e.PipsType = void 0),
-            ((L = e.PipsType || (e.PipsType = {}))[(L.None = -1)] = "None"),
-            (L[(L.NoValue = 0)] = "NoValue"),
-            (L[(L.LargeValue = 1)] = "LargeValue"),
-            (L[(L.SmallValue = 2)] = "SmallValue");
+            ((M = e.PipsType || (e.PipsType = {}))[(M.None = -1)] = "None"),
+            (M[(M.NoValue = 0)] = "NoValue"),
+            (M[(M.LargeValue = 1)] = "LargeValue"),
+            (M[(M.SmallValue = 2)] = "SmallValue");
           var O = (function () {
               function e(e, t, s) {
                 var n;
@@ -261,7 +261,7 @@
                   return P(this.xVal, this.xPct, e);
                 }),
                 (e.prototype.getStep = function (e) {
-                  return (e = M(this.xPct, this.xSteps, this.snap, e));
+                  return (e = L(this.xPct, this.xSteps, this.snap, e));
                 }),
                 (e.prototype.getDefaultStep = function (e, t, s) {
                   var n = T(e, this.xPct);
@@ -412,12 +412,12 @@
               throw new Error("noUiSlider: Missing 'min' or 'max' in 'range'.");
             e.spectrum = new O(t, e.snap || !1, e.singleStep);
           }
-          function q(e, t) {
+          function H(e, t) {
             if (((t = p(t)), !Array.isArray(t) || !t.length))
               throw new Error("noUiSlider: 'start' option is incorrect.");
             (e.handles = t.length), (e.start = t);
           }
-          function H(e, t) {
+          function q(e, t) {
             if ("boolean" != typeof t)
               throw new Error("noUiSlider: 'snap' option must be a boolean.");
             e.snap = t;
@@ -641,10 +641,10 @@
                 keyboardPageMultiplier: { r: !1, t: I },
                 keyboardMultiplier: { r: !1, t: z },
                 keyboardDefaultStep: { r: !1, t: V },
-                start: { r: !0, t: q },
+                start: { r: !0, t: H },
                 connect: { r: !0, t: j },
                 direction: { r: !0, t: X },
-                snap: { r: !1, t: H },
+                snap: { r: !1, t: q },
                 animate: { r: !1, t: F },
                 animationDuration: { r: !1, t: G },
                 range: { r: !0, t: B },
@@ -706,8 +706,8 @@
               T = y() && w(),
               k = t,
               P = s.spectrum,
-              M = [],
               L = [],
+              M = [],
               A = [],
               O = 0,
               $ = {},
@@ -749,14 +749,14 @@
                 n
               );
             }
-            function q(e, t) {
+            function H(e, t) {
               return !!t && V(e, s.cssClasses.connect);
             }
-            function H(e, t) {
+            function q(e, t) {
               var n = V(t, s.cssClasses.connects);
-              (h = []), (S = []).push(q(n, e[0]));
+              (h = []), (S = []).push(H(n, e[0]));
               for (var i = 0; i < s.handles; i++)
-                h.push(B(t, i)), (A[i] = i), S.push(q(n, e[i + 1]));
+                h.push(B(t, i)), (A[i] = i), S.push(H(n, e[i + 1]));
             }
             function F(e) {
               return (
@@ -810,8 +810,8 @@
                 me("update" + N.aria, function (e, t, n, i, r) {
                   A.forEach(function (e) {
                     var t = h[e],
-                      i = we(L, e, 0, !0, !0, !0),
-                      a = we(L, e, 100, !0, !0, !0),
+                      i = we(M, e, 0, !0, !0, !0),
+                      a = we(M, e, 100, !0, !0, !0),
                       o = r[e],
                       l = String(s.ariaFormat.to(n[e]));
                     (i = P.fromStepping(i).toFixed(1)),
@@ -1057,7 +1057,7 @@
               return (
                 h.forEach(function (n, i) {
                   if (!R(i)) {
-                    var r = L[i],
+                    var r = M[i],
                       a = Math.abs(r - e);
                     (a < t || (a <= t && e > r) || (100 === a && 100 === t)) &&
                       ((s = i), (t = a));
@@ -1122,7 +1122,7 @@
                     pageOffset: e.pageOffset,
                     handleNumbers: t.handleNumbers,
                     buttonsProperty: e.buttons,
-                    locations: L.slice(),
+                    locations: M.slice(),
                   }),
                   o = se(x.end, D, ce, {
                     target: e.target,
@@ -1196,12 +1196,12 @@
                   g = _e(t)[m];
                 if (null === g) return !1;
                 !1 === g &&
-                  (g = P.getDefaultStep(L[t], u, s.keyboardDefaultStep)),
+                  (g = P.getDefaultStep(M[t], u, s.keyboardDefaultStep)),
                   (g *=
                     d || c ? s.keyboardPageMultiplier : s.keyboardMultiplier),
                   (g = Math.max(g, 1e-7)),
                   (g *= u ? -1 : 1),
-                  (o = M[t] + g);
+                  (o = L[t] + g);
               } else
                 o = f
                   ? s.spectrum.xVal[s.spectrum.xVal.length - 1]
@@ -1274,11 +1274,11 @@
                   $[i].forEach(function (e) {
                     e.call(
                       ze,
-                      M.map(s.format.to),
+                      L.map(s.format.to),
                       t,
-                      M.slice(),
-                      n || !1,
                       L.slice(),
+                      n || !1,
+                      M.slice(),
                       ze
                     );
                   });
@@ -1348,27 +1348,27 @@
               return s.dir ? 100 - e - t : e;
             }
             function Ce(e, t) {
-              (L[e] = t), (M[e] = P.fromStepping(t));
+              (M[e] = t), (L[e] = P.fromStepping(t));
               var n = "translate(" + ye(Ee(t, 0) - z + "%", "0") + ")";
               (h[e].style[s.transformRule] = n), ke(e), ke(e + 1);
             }
             function xe() {
               A.forEach(function (e) {
-                var t = L[e] > 50 ? -1 : 1,
+                var t = M[e] > 50 ? -1 : 1,
                   s = 3 + (h.length + t * e);
                 h[e].style.zIndex = String(s);
               });
             }
             function Te(e, t, s, n, i) {
               return (
-                i || (t = we(L, e, t, s, n, !1)), !1 !== t && (Ce(e, t), !0)
+                i || (t = we(M, e, t, s, n, !1)), !1 !== t && (Ce(e, t), !0)
               );
             }
             function ke(e) {
               if (S[e]) {
                 var t = 0,
                   n = 100;
-                0 !== e && (t = L[e - 1]), e !== S.length - 1 && (n = L[e]);
+                0 !== e && (t = M[e - 1]), e !== S.length - 1 && (n = M[e]);
                 var i = n - t,
                   r = "translate(" + ye(Ee(t, i) + "%", "0") + ")",
                   a = "scale(" + ye(i / 100, "1") + ")";
@@ -1377,37 +1377,37 @@
             }
             function Pe(e, t) {
               return null === e || !1 === e || void 0 === e
-                ? L[t]
+                ? M[t]
                 : ("number" == typeof e && (e = String(e)),
                   !1 !== (e = s.format.from(e)) && (e = P.toStepping(e)),
-                  !1 === e || isNaN(e) ? L[t] : e);
+                  !1 === e || isNaN(e) ? M[t] : e);
             }
-            function Me(e, t, n) {
+            function Le(e, t, n) {
               var i = p(e),
-                r = void 0 === L[0];
+                r = void 0 === M[0];
               (t = void 0 === t || t),
                 s.animate && !r && d(k, s.cssClasses.tap, s.animationDuration),
                 A.forEach(function (e) {
                   Te(e, Pe(i[e], e), !0, !1, n);
                 });
               var a = 1 === A.length ? 0 : 1;
-              if (r && P.hasNoSize() && ((n = !0), (L[0] = 0), A.length > 1)) {
+              if (r && P.hasNoSize() && ((n = !0), (M[0] = 0), A.length > 1)) {
                 var o = 100 / (A.length - 1);
                 A.forEach(function (e) {
-                  L[e] = e * o;
+                  M[e] = e * o;
                 });
               }
               for (; a < A.length; ++a)
                 A.forEach(function (e) {
-                  Te(e, L[e], !0, !0, n);
+                  Te(e, M[e], !0, !0, n);
                 });
               xe(),
                 A.forEach(function (e) {
                   be("update", e), null !== i[e] && t && be("set", e);
                 });
             }
-            function Le(e) {
-              Me(s.start, e);
+            function Me(e) {
+              Le(s.start, e);
             }
             function Ae(e, t, s, n) {
               if (!((e = Number(e)) >= 0 && e < A.length))
@@ -1416,8 +1416,8 @@
             }
             function Oe(e) {
               if ((void 0 === e && (e = !1), e))
-                return 1 === M.length ? M[0] : M.slice(0);
-              var t = M.map(s.format.to);
+                return 1 === L.length ? L[0] : L.slice(0);
+              var t = L.map(s.format.to);
               return 1 === t.length ? t[0] : t;
             }
             function $e() {
@@ -1434,9 +1434,9 @@
               delete k.noUiSlider;
             }
             function _e(e) {
-              var t = L[e],
+              var t = M[e],
                 n = P.getNearbySteps(t),
-                i = M[e],
+                i = L[e],
                 r = n.thisStep.step,
                 a = null;
               if (s.snap)
@@ -1489,14 +1489,14 @@
                 (s.padding = a.padding),
                 s.pips ? ee(s.pips) : Z(),
                 s.tooltips ? W() : U(),
-                (L = []),
-                Me(i(e.start) ? e.start : n, t);
+                (M = []),
+                Le(i(e.start) ? e.start : n, t);
             }
             function Ie() {
               (c = F(k)),
-                H(s.connect, c),
+                q(s.connect, c),
                 fe(s.events),
-                Me(s.start),
+                Le(s.start),
                 s.pips && ee(s.pips),
                 s.tooltips && W(),
                 Y();
@@ -1508,11 +1508,11 @@
               on: me,
               off: ve,
               get: Oe,
-              set: Me,
+              set: Le,
               setHandle: Ae,
-              reset: Le,
+              reset: Me,
               __moveHandles: function (e, t, s) {
-                Se(e, t, L, s);
+                Se(e, t, M, s);
               },
               options: o,
               updateOptions: De,
@@ -1520,7 +1520,7 @@
               removePips: Z,
               removeTooltips: U,
               getPositions: function () {
-                return L.slice();
+                return M.slice();
               },
               getTooltips: function () {
                 return C;
@@ -1761,11 +1761,11 @@
                                 ),
                                 u.clip
                               ),
-                          M = P - v,
-                          L = i(),
+                          L = P - v,
+                          M = i(),
                           A = 0,
                           O =
-                            ((b = M),
+                            ((b = L),
                             (y = (w = u).speedAsDuration
                               ? w.speed
                               : Math.abs((b / 1e3) * w.speed)),
@@ -1780,7 +1780,7 @@
                               (A += t - S),
                               (C =
                                 v +
-                                M *
+                                L *
                                   ((i = E =
                                     1 < (E = 0 === O ? 0 : A / O) ? 1 : E),
                                   "easeInQuad" === (s = u).easing &&
@@ -1827,7 +1827,7 @@
                                 if (
                                   t == s ||
                                   i == s ||
-                                  (v < s && e.innerHeight + i) >= L
+                                  (v < s && e.innerHeight + i) >= M
                                 )
                                   return (
                                     f.cancelScroll(!0),
@@ -3141,10 +3141,10 @@
         Object.defineProperty(C.fn, e, { value: k[e], writable: !0 });
       });
       const P = C;
-      function M(e, t = 0) {
+      function L(e, t = 0) {
         return setTimeout(e, t);
       }
-      function L() {
+      function M() {
         return Date.now();
       }
       function A(e, t = "x") {
@@ -3345,7 +3345,7 @@
           I
         );
       }
-      function q() {
+      function H() {
         return (
           z ||
             (z = (function () {
@@ -3367,7 +3367,7 @@
           z
         );
       }
-      const H = {
+      const q = {
         on(e, t, s) {
           const n = this;
           if ("function" != typeof t) return n;
@@ -4323,7 +4323,7 @@
                       )
                       .eq(0)
                       .index()),
-                    M(() => {
+                    L(() => {
                       e.slideTo(r);
                     }))
                   : e.slideTo(r)
@@ -4335,7 +4335,7 @@
                     )
                     .eq(0)
                     .index()),
-                  M(() => {
+                  L(() => {
                     e.slideTo(r);
                   }))
                 : e.slideTo(r);
@@ -4490,7 +4490,7 @@
           }),
           (a.startX = p),
           (a.startY = h),
-          (i.touchStartTime = L()),
+          (i.touchStartTime = M()),
           (t.allowClick = !0),
           t.updateSize(),
           (t.swipeDirection = void 0),
@@ -4543,7 +4543,7 @@
                 currentX: d,
                 currentY: u,
               }),
-              (n.touchStartTime = L()))
+              (n.touchStartTime = M()))
             )
           );
         if (n.isTouchEvent && i.touchReleaseOnEdges && !i.loop)
@@ -4706,7 +4706,7 @@
           s.isTouched &&
           (!0 === t.allowSlideNext || !0 === t.allowSlidePrev) &&
           t.setGrabCursor(!1);
-        const c = L(),
+        const c = M(),
           d = c - s.touchStartTime;
         if (t.allowClick) {
           const e = l.path || (l.composedPath && l.composedPath());
@@ -4717,8 +4717,8 @@
               t.emit("doubleTap doubleClick", l);
         }
         if (
-          ((s.lastClickTime = L()),
-          M(() => {
+          ((s.lastClickTime = M()),
+          L(() => {
             t.destroyed || (t.allowClick = !0);
           }),
           !s.isTouched ||
@@ -5125,7 +5125,7 @@
         };
       }
       const le = {
-          eventsEmitter: H,
+          eventsEmitter: q,
           update: F,
           translate: G,
           transition: {
@@ -5272,7 +5272,7 @@
           (n.__swiper__ = !0),
             (n.support = V()),
             (n.device = B({ userAgent: s.userAgent })),
-            (n.browser = q()),
+            (n.browser = H()),
             (n.eventsListeners = {}),
             (n.eventsAnyListeners = []),
             (n.modules = [...n.__modules__]),
@@ -5358,7 +5358,7 @@
                 startTranslate: void 0,
                 allowThresholdMove: void 0,
                 focusableElements: n.params.focusableElements,
-                lastClickTime: L(),
+                lastClickTime: M(),
                 clickTimeout: void 0,
                 velocities: [],
                 allowMomentumBounce: void 0,
@@ -6224,7 +6224,7 @@
           t.attr("data-swiper-autoplay") &&
             (s = t.attr("data-swiper-autoplay") || e.params.autoplay.delay),
             clearTimeout(i),
-            (i = M(() => {
+            (i = L(() => {
               let t;
               e.params.autoplay.reverseDirection
                 ? e.params.loop
@@ -6415,7 +6415,6 @@
           })();
       });
       let be = !1;
-      var we;
       setTimeout(() => {
         if (be) {
           let e = new Event("windowScroll");
@@ -6423,8 +6422,37 @@
             document.dispatchEvent(e);
           });
         }
-      }, 0),
-        (window.FLS = !0),
+      }, 0);
+      const we = document.querySelectorAll("._anim-items");
+      if (we.length > 0) {
+        function e() {
+          for (let e = 0; e < we.length; e++) {
+            const s = we[e],
+              n = s.offsetHeight,
+              i = t(s).top,
+              r = 4;
+            let a = window.innerHeight - n / r;
+            n > window.innerHeight &&
+              (a = window.innerHeight - window.innerHeight / r),
+              pageYOffset > i - a && pageYOffset < i + n
+                ? s.classList.add("_active")
+                : s.classList.contains("_anim-no-hide") ||
+                  s.classList.remove("_active");
+          }
+        }
+        function t(e) {
+          const t = e.getBoundingClientRect(),
+            s = window.pageXOffset || document.documentElement.scrollLeft,
+            n = window.pageYOffset || document.documentElement.scrollTop;
+          return { top: t.top + n, left: t.left + s };
+        }
+        window.addEventListener("scroll", e),
+          setTimeout(() => {
+            e();
+          }, 300);
+      }
+      var ye;
+      (window.FLS = !0),
         (function (e) {
           let t = new Image();
           (t.onload = t.onerror =
@@ -6445,6 +6473,18 @@
               n &&
                 (i(), document.documentElement.classList.toggle("menu-open"));
             });
+        })(),
+        (function () {
+          if (
+            document.querySelectorAll("[data-fullscreen]").length &&
+            t.any()
+          ) {
+            function e() {
+              let e = 0.01 * window.innerHeight;
+              document.documentElement.style.setProperty("--vh", `${e}px`);
+            }
+            window.addEventListener("resize", e), e();
+          }
         })(),
         new e({}),
         (function () {
@@ -6516,7 +6556,7 @@
               o(`[Формы]: ${"Форма отправлена!"}`);
           }
         })(!0),
-        (u.inputMaskModule = new d({ logging: we })),
+        (u.inputMaskModule = new d({ logging: ye })),
         (function () {
           function e(e) {
             if ("click" === e.type) {

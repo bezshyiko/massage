@@ -6,14 +6,14 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220117185139">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220118210049">
 	<link rel="shortcut icon" href="ico.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper ">
 		<header class="header">
 			<div class="header__container">
 				<a href="index.html" class="header__logo">
@@ -48,10 +48,10 @@
 						</div>
 						<button data-goto=".about__block" class="main-block__btn button">Дізнатись більше</button>
 						<div class="main-block__social social">
-							<a href="" class="social__facebook _icon-Facebook"></a>
-							<a href="" class="social__instagram _icon-Instagram"></a>
-							<a href="" class="social__telegram _icon-Telegram"></a>
-							<a href="" class="social__viber _icon-Viber"></a>
+							<a href="" class="social__facebook _anim-items _icon-Facebook"></a>
+							<a href="" class="social__instagram _anim-items _icon-Instagram"></a>
+							<a href="" class="social__telegram _anim-items _icon-Telegram"></a>
+							<a href="" class="social__viber _anim-items _icon-Viber"></a>
 						</div>
 					</div>
 					<div class="main-block__column">
@@ -178,9 +178,9 @@
 					<div class="footer__column">
 						<div href="" class="footer__nav">
 							<ul class="footer__list">
-								<li><a href="" class="menu__link">Головна</a></li>
-								<li><a href="" class="menu__link">Про мене</a></li>
-								<li><a href="" class="menu__link">Послуги</a></li>
+								<li><a href="#" data-goto=".main-block" class="menu__link">Головна</a></li>
+								<li><a href="#" data-goto=".about__block" class="menu__link">Про мене</a></li>
+								<li><a href="#" data-goto=".services__block" class="menu__link">Послуги</a></li>
 							</ul>
 						</div>
 					</div>
@@ -188,7 +188,7 @@
 			</div>
 		</footer>
 	</div>
-	<div id="header" aria-hidden="true" class="popup">
+	<div id="header" aria-hidden="false" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close _icon-close"></button>
@@ -197,26 +197,26 @@
 					</div>
 					<form name="header" action="#" class="popup__form form">
 						<div class="form__name">
-							<label for="" class="form__label">Ваше ім'я:</label>
-							<input type="text" name="form[]" data-required="email" data-value="Ім'я" data-error="Помилка" class="form__input input">
+							<label for="Name" class="form__label">Ваше ім'я:</label>
+							<input type="text" name="Name" data-required="name" data-value="Ім'я" data-error="Помилка" class="form__input input">
 						</div>
 						<div class="form__tel">
 							<label for="" class="form__label">Номер телефону:</label>
-							<input type="tel" name="form[]" data-mask="значение,подзначение" data-error="Помилка" class="form__input input _req">
+							<input type="tel" name=" " data-required="phone" data-error="Помилка" data-error="Помилка" class="form__input input">
 						</div>
 						<div class="form__connection">
 							<div class="form__title">Як краще з вами зв'язатись?</div>
 							<div class="form__options options">
 								<div class="options__item _icon-phone1">
-									<input id="tel" type="radio" name="form[]" data-error="Помилка" data-value="Ваш коментр до замовлення" class="options__input _req">
+									<input checked id="tel" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="tel" class="options__label "></label>
 								</div>
 								<div class="options__item _icon-Viber">
-									<input id="viber" type="radio" name="form[]" data-error="Помилка" data-value="Ваш коментр до замовлення" class="options__input _req">
+									<input id="viber" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="viber" class="options__label "></label>
 								</div>
 								<div class="options__item _icon-Telegram">
-									<input id="telegram" type="radio" name="form[]" data-error="Помилка" data-value="Ваш коментр до замовлення" class="options__input _req">
+									<input id="telegram" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="telegram" class="options__label"></label>
 								</div>
 							</div>
@@ -228,7 +228,7 @@
 		</div>
 	</div>
 
-	<div id="kst" aria-hidden="true" class="popup">
+	<div id="kst" aria-hidden="false" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close _icon-close"></button>
@@ -238,25 +238,25 @@
 					<form name="kst" action="#" class="popup__form form">
 						<div class="form__name">
 							<label for="" class="form__label">Ваше ім'я:</label>
-							<input type="text" name="form[]" data-value="Ім'я" data-error="Помилка" class="form__input input _req">
+							<input type="text" name=" " data-value="Ім'я" data-error="Помилка" class="form__input input">
 						</div>
 						<div class="form__tel">
 							<label for="" class="form__label">Номер телефону:</label>
-							<input type="tel" name="form[]" data-value="0681112123" data-error="Помилка" class="form__input input _req">
+							<input type="tel" name=" " data-value="0681112123" data-error="Помилка" class="form__input input">
 						</div>
 						<div class="form__connection">
 							<div class="form__title">Як краще з вами зв'язатись?</div>
 							<div class="form__options options">
 								<div class="options__item _icon-phone1">
-									<input id="telephone" type="radio" name="form[]" data-error="Помилка" data-value="Ваш коментр до замовлення" class="options__input _req">
+									<input id="telephone" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="telephone" class="options__label "></label>
 								</div>
 								<div class="options__item _icon-Viber">
-									<input id="viber1" type="radio" name="form[]" data-error="Помилка" data-value="Ваш коментр до замовлення" class="options__input _req">
+									<input id="viber1" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="viber1" class="options__label "></label>
 								</div>
 								<div class="options__item _icon-Telegram">
-									<input id="telegram1" type="radio" name="form[]" data-error="Помилка" data-value="Ваш коментр до замовлення" class="options__input _req">
+									<input id="telegram1" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="telegram1" class="options__label"></label>
 								</div>
 							</div>
@@ -268,7 +268,7 @@
 		</div>
 	</div>
 
-	<div id="osteopathy" aria-hidden="true" class="popup">
+	<div id="osteopathy" aria-hidden="false" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close _icon-close"></button>
@@ -278,25 +278,25 @@
 					<form name="osteopathy" action="#" class="popup__form form">
 						<div class="form__name">
 							<label for="" class="form__label">Ваше ім'я:</label>
-							<input type="text" name="form[]" data-value="Ім'я" data-error="Помилка" class="form__input input _req">
+							<input type="text" name=" " data-value="Ім'я" data-error="Помилка" class="form__input input">
 						</div>
 						<div class="form__tel">
 							<label for="" class="form__label">Номер телефону:</label>
-							<input type="tel" name="form[]" data-value="0681112123" data-error="Помилка" class="form__input input _req">
+							<input type="tel" name=" " data-value="0681112123" data-error="Помилка" class="form__input input">
 						</div>
 						<div class="form__connection">
 							<div class="form__title">Як краще з вами зв'язатись?</div>
 							<div class="form__options options">
 								<div class="options__item _icon-phone1">
-									<input id="tel2" type="radio" name="form[]" data-error="Помилка" data-value="Ваш коментр до замовлення" class="options__input _req">
+									<input id="tel2" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="tel2" class="options__label "></label>
 								</div>
 								<div class="options__item _icon-Viber">
-									<input id="viber2" type="radio" name="form[]" data-error="Помилка" data-value="Ваш коментр до замовлення" class="options__input _req">
+									<input id="viber2" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="viber2" class="options__label "></label>
 								</div>
 								<div class="options__item _icon-Telegram">
-									<input id="telegram2" type="radio" name="form[]" data-error="Помилка" data-value="Ваш коментр до замовлення" class="options__input _req">
+									<input id="telegram2" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="telegram2" class="options__label"></label>
 								</div>
 							</div>
@@ -308,7 +308,7 @@
 		</div>
 	</div>
 
-	<div id="classic" aria-hidden="true" class="popup">
+	<div id="classic" aria-hidden="false" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close _icon-close"></button>
@@ -318,25 +318,25 @@
 					<form name="classic" action="#" class="popup__form form">
 						<div class="form__name">
 							<label for="" class="form__label">Ваше ім'я:</label>
-							<input type="text" name="form[]" data-value="Ім'я" data-error="Помилка" class="form__input input _req">
+							<input type="text" name=" " data-value="Ім'я" data-error="Помилка" class="form__input input">
 						</div>
 						<div class="form__tel">
 							<label for="" class="form__label">Номер телефону:</label>
-							<input type="tel" name="form[]" data-value="0681112123" data-error="Помилка" class="form__input input _req">
+							<input type="tel" name=" " data-value="0681112123" data-error="Помилка" class="form__input input">
 						</div>
 						<div class="form__connection">
 							<div class="form__title">Як краще з вами зв'язатись?</div>
 							<div class="form__options options">
 								<div class="options__item _icon-phone1">
-									<input id="tel3" type="radio" name="form[]" data-error="Помилка" data-value="Ваш коментр до замовлення" class="options__input _req">
+									<input id="tel3" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="tel3" class="options__label "></label>
 								</div>
 								<div class="options__item _icon-Viber">
-									<input id="viber3" type="radio" name="form[]" data-error="Помилка" data-value="Ваш коментр до замовлення" class="options__input _req">
+									<input id="viber3" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="viber3" class="options__label "></label>
 								</div>
 								<div class="options__item _icon-Telegram">
-									<input id="telegram3" type="radio" name="form[]" data-error="Помилка" data-value="Ваш коментр до замовлення" class="options__input _req">
+									<input id="telegram3" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="telegram3" class="options__label"></label>
 								</div>
 							</div>
@@ -348,7 +348,7 @@
 		</div>
 	</div>
 
-	<div id="coronavirus" aria-hidden="true" class="popup">
+	<div id="coronavirus" aria-hidden="false" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close _icon-close"></button>
@@ -358,25 +358,25 @@
 					<form name="coronavirus" action="#" class="popup__form form">
 						<div class="form__name">
 							<label for="" class="form__label">Ваше ім'я:</label>
-							<input type="text" name="form[]" data-value="Ім'я" data-error="Помилка" class="form__input input _req">
+							<input type="text" name=" " data-value="Ім'я" data-error="Помилка" class="form__input input">
 						</div>
 						<div class="form__tel">
 							<label for="" class="form__label">Номер телефону:</label>
-							<input type="tel" name="form[]" data-value="0681112123" data-error="Помилка" class="form__input input _req">
+							<input type="tel" name=" " data-value="0681112123" data-error="Помилка" class="form__input input">
 						</div>
 						<div class="form__connection">
 							<div class="form__title">Як краще з вами зв'язатись?</div>
 							<div class="form__options options">
 								<div class="options__item _icon-phone1">
-									<input id="tel4" type="radio" name="form[]" data-error="Помилка" data-value="Ваш коментр до замовлення" class="options__input _req">
+									<input id="tel4" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="tel4" class="options__label "></label>
 								</div>
 								<div class="options__item _icon-Viber">
-									<input id="viber4" type="radio" name="form[]" data-error="Помилка" data-value="Ваш коментр до замовлення" class="options__input _req">
+									<input id="viber4" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="viber4" class="options__label "></label>
 								</div>
 								<div class="options__item _icon-Telegram">
-									<input id="telegram4" type="radio" name="form[]" data-error="Помилка" data-value="Ваш коментр до замовлення" class="options__input _req">
+									<input id="telegram4" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="telegram4" class="options__label"></label>
 								</div>
 							</div>
@@ -388,7 +388,7 @@
 		</div>
 	</div>
 
-	<script src="js/app.min.js?_v=20220117185139"></script>
+	<script src="js/app.min.js?_v=20220118210049"></script>
 </body>
 
 </html>
