@@ -510,6 +510,12 @@ body.popup-show::after {
   transform: translate(0px);
   opacity: 1;
 }
+@media (max-width: 47.99875em) {
+  .social__facebook {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
 .social__instagram {
   display: inline-block;
   transform: translate(500px);
@@ -520,6 +526,12 @@ body.popup-show::after {
   display: inline-block;
   transform: translate(0px);
   opacity: 1;
+}
+@media (max-width: 47.99875em) {
+  .social__instagram {
+    transform: translate(0px);
+    opacity: 1;
+  }
 }
 .social__telegram {
   display: inline-block;
@@ -532,6 +544,12 @@ body.popup-show::after {
   transform: translate(0px);
   opacity: 1;
 }
+@media (max-width: 47.99875em) {
+  .social__telegram {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
 .social__viber {
   display: inline-block;
   transform: translate(500px);
@@ -542,6 +560,12 @@ body.popup-show::after {
   display: inline-block;
   transform: translate(0px);
   opacity: 1;
+}
+@media (max-width: 47.99875em) {
+  .social__viber {
+    transform: translate(0px);
+    opacity: 1;
+  }
 }
 
 .title {
@@ -798,6 +822,50 @@ body.popup-show::after {
     transform: rotate(45deg);
     bottom: calc(50% - 1px);
   }
+}
+
+._icon-home._anim-items {
+  transform: translate(500px);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.8s ease;
+}
+._icon-home._anim-items._active {
+  display: inline-block;
+  transform: translate(0px);
+  opacity: 1;
+}
+
+._icon-user._anim-items {
+  transform: translate(500px);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.8s ease;
+}
+._icon-user._anim-items._active {
+  display: inline-block;
+  transform: translate(0px);
+  opacity: 1;
+}
+
+._icon-service._anim-items {
+  transform: translate(500px);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.8s ease;
+}
+._icon-service._anim-items._active {
+  display: inline-block;
+  transform: translate(0px);
+  opacity: 1;
+}
+
+._icon-phone1._anim-items {
+  transform: translate(500px);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.8s ease;
+}
+._icon-phone1._anim-items._active {
+  display: inline-block;
+  transform: translate(0px);
+  opacity: 1;
 }
 
 /*
