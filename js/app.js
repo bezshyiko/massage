@@ -6556,19 +6556,8 @@
             e();
           }, 300);
       }
-      var Ce,
-        xe = document.createElement("script");
-      (xe.src =
-        "https://maps.googleapis.com/maps/api/js?key=AIzaSyDs6pQNe7LmX9JSKJ_hCN5yJJoeW_k4Oe0&callback=initMap"),
-        (xe.async = !0),
-        (window.initMap = function () {
-          map = new google.maps.Map(document.getElementById("map"), {
-            center: { lat: -34.397, lng: 150.644 },
-            zoom: 8,
-          });
-        }),
-        document.head.appendChild(xe),
-        (window.FLS = !0),
+      var Ce;
+      (window.FLS = !0),
         (function (e) {
           let t = new Image();
           (t.onload = t.onerror =
