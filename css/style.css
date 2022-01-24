@@ -1500,9 +1500,6 @@ body.popup-show::after {
   bottom: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: end;
   overflow: hidden;
   transform: translate(150px, 0px);
   opacity: 0;
@@ -1553,10 +1550,10 @@ body.popup-show::after {
   }
 }
 .main-block__photo img {
-  position: relative;
+  margin: 0 auto;
+  position: absolute;
   bottom: 0;
   padding: 70px 0px 0px 0px;
-  align-self: end;
   vertical-align: bottom;
 }
 @media (min-width: 91.875em) {
