@@ -1366,17 +1366,19 @@ body.popup-show::after {
   }
 }
 .main-block__column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   flex: 1 1 50%;
 }
 @media (max-width: 47.99875em) {
   .main-block__column {
-    justify-content: flex-start;
     flex: 0 1 50%;
   }
+}
+.main-block__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 .main-block__title {
   font-weight: 900;
