@@ -151,7 +151,7 @@
               o = t[n];
             return a + C([i, r], s) / S(a, o);
           }
-          function k(e, t, s) {
+          function L(e, t, s) {
             if (s >= 100) return e.slice(-1)[0];
             var n = T(s, t),
               i = e[n - 1],
@@ -159,7 +159,7 @@
               a = t[n - 1];
             return x([i, r], (s - a) * S(a, t[n]));
           }
-          function L(e, t, s, n) {
+          function k(e, t, s, n) {
             if (100 === n) return n;
             var i = T(n, e),
               r = e[i - 1],
@@ -258,10 +258,10 @@
                   return (e = P(this.xVal, this.xPct, e));
                 }),
                 (e.prototype.fromStepping = function (e) {
-                  return k(this.xVal, this.xPct, e);
+                  return L(this.xVal, this.xPct, e);
                 }),
                 (e.prototype.getStep = function (e) {
-                  return (e = L(this.xPct, this.xSteps, this.snap, e));
+                  return (e = k(this.xPct, this.xSteps, this.snap, e));
                 }),
                 (e.prototype.getDefaultStep = function (e, t, s) {
                   var n = T(e, this.xPct);
@@ -705,8 +705,8 @@
               x = b(),
               T = y() && w(),
               P = t,
-              k = s.spectrum,
-              L = [],
+              L = s.spectrum,
+              k = [],
               A = [],
               M = [],
               O = 0,
@@ -814,9 +814,9 @@
                       a = we(A, e, 100, !0, !0, !0),
                       o = r[e],
                       l = String(s.ariaFormat.to(n[e]));
-                    (i = k.fromStepping(i).toFixed(1)),
-                      (a = k.fromStepping(a).toFixed(1)),
-                      (o = k.fromStepping(o).toFixed(1)),
+                    (i = L.fromStepping(i).toFixed(1)),
+                      (a = L.fromStepping(a).toFixed(1)),
+                      (o = L.fromStepping(o).toFixed(1)),
                       t.children[0].setAttribute("aria-valuemin", i),
                       t.children[0].setAttribute("aria-valuemax", a),
                       t.children[0].setAttribute("aria-valuenow", o),
@@ -826,7 +826,7 @@
             }
             function X(t) {
               if (t.mode === e.PipsMode.Range || t.mode === e.PipsMode.Steps)
-                return k.xVal;
+                return L.xVal;
               if (t.mode === e.PipsMode.Count) {
                 if (t.values < 2)
                   throw new Error(
@@ -841,14 +841,14 @@
                 : t.mode === e.PipsMode.Values
                 ? t.stepped
                   ? t.values.map(function (e) {
-                      return k.fromStepping(k.getStep(k.toStepping(e)));
+                      return L.fromStepping(L.getStep(L.toStepping(e)));
                     })
                   : t.values
                 : [];
             }
             function Q(e, t) {
               return e.map(function (e) {
-                return k.fromStepping(t ? k.getStep(e) : e);
+                return L.fromStepping(t ? L.getStep(e) : e);
               });
             }
             function K(t) {
@@ -857,8 +857,8 @@
               }
               var n = X(t),
                 i = {},
-                r = k.xVal[0],
-                o = k.xVal[k.xVal.length - 1],
+                r = L.xVal[0],
+                o = L.xVal[L.xVal.length - 1],
                 l = !1,
                 c = !1,
                 d = 0;
@@ -884,7 +884,7 @@
                     S = n[a + 1],
                     E = t.mode === e.PipsMode.Steps;
                   for (
-                    E && (o = k.xNumSteps[a]),
+                    E && (o = L.xNumSteps[a]),
                       o || (o = S - y),
                       void 0 === S && (S = y),
                       o = Math.max(o, 1e-7),
@@ -893,13 +893,13 @@
                     u = s(u, o)
                   ) {
                     for (
-                      v = (f = (h = k.toStepping(u)) - d) / (t.density || 1),
+                      v = (f = (h = L.toStepping(u)) - d) / (t.density || 1),
                         w = f / (b = Math.round(v)),
                         p = 1;
                       p <= b;
                       p += 1
                     )
-                      i[(m = d + p * w).toFixed(5)] = [k.fromStepping(m), 0];
+                      i[(m = d + p * w).toFixed(5)] = [L.fromStepping(m), 0];
                     (g =
                       n.indexOf(u) > -1
                         ? e.PipsType.LargeValue
@@ -1164,8 +1164,8 @@
             }
             function pe(e) {
               var t = ie(e.calcPoint),
-                s = k.getStep(t),
-                n = k.fromStepping(s);
+                s = L.getStep(t),
+                n = L.fromStepping(s);
               Object.keys($).forEach(function (e) {
                 "hover" === e.split(".")[0] &&
                   $[e].forEach(function (e) {
@@ -1196,18 +1196,18 @@
                   g = _e(t)[m];
                 if (null === g) return !1;
                 !1 === g &&
-                  (g = k.getDefaultStep(A[t], u, s.keyboardDefaultStep)),
+                  (g = L.getDefaultStep(A[t], u, s.keyboardDefaultStep)),
                   (g *=
                     d || c ? s.keyboardPageMultiplier : s.keyboardMultiplier),
                   (g = Math.max(g, 1e-7)),
                   (g *= u ? -1 : 1),
-                  (o = L[t] + g);
+                  (o = k[t] + g);
               } else
                 o = f
                   ? s.spectrum.xVal[s.spectrum.xVal.length - 1]
                   : s.spectrum.xVal[0];
               return (
-                Te(t, k.toStepping(o), !0, !0),
+                Te(t, L.toStepping(o), !0, !0),
                 be("slide", t),
                 be("update", t),
                 be("change", t),
@@ -1274,9 +1274,9 @@
                   $[i].forEach(function (e) {
                     e.call(
                       ze,
-                      L.map(s.format.to),
+                      k.map(s.format.to),
                       t,
-                      L.slice(),
+                      k.slice(),
                       n || !1,
                       A.slice(),
                       ze
@@ -1291,30 +1291,30 @@
                   !s.events.unconstrained &&
                   (i &&
                     t > 0 &&
-                    ((o = k.getAbsoluteDistance(e[t - 1], s.margin, !1)),
+                    ((o = L.getAbsoluteDistance(e[t - 1], s.margin, !1)),
                     (n = Math.max(n, o))),
                   r &&
                     t < h.length - 1 &&
-                    ((o = k.getAbsoluteDistance(e[t + 1], s.margin, !0)),
+                    ((o = L.getAbsoluteDistance(e[t + 1], s.margin, !0)),
                     (n = Math.min(n, o)))),
                 h.length > 1 &&
                   s.limit &&
                   (i &&
                     t > 0 &&
-                    ((o = k.getAbsoluteDistance(e[t - 1], s.limit, !1)),
+                    ((o = L.getAbsoluteDistance(e[t - 1], s.limit, !1)),
                     (n = Math.min(n, o))),
                   r &&
                     t < h.length - 1 &&
-                    ((o = k.getAbsoluteDistance(e[t + 1], s.limit, !0)),
+                    ((o = L.getAbsoluteDistance(e[t + 1], s.limit, !0)),
                     (n = Math.max(n, o)))),
                 s.padding &&
                   (0 === t &&
-                    ((o = k.getAbsoluteDistance(0, s.padding[0], !1)),
+                    ((o = L.getAbsoluteDistance(0, s.padding[0], !1)),
                     (n = Math.max(n, o))),
                   t === h.length - 1 &&
-                    ((o = k.getAbsoluteDistance(100, s.padding[1], !0)),
+                    ((o = L.getAbsoluteDistance(100, s.padding[1], !0)),
                     (n = Math.min(n, o)))),
-                !((n = u((n = k.getStep(n)))) === e[t] && !a) && n
+                !((n = u((n = L.getStep(n)))) === e[t] && !a) && n
               );
             }
             function ye(e, t) {
@@ -1348,7 +1348,7 @@
               return s.dir ? 100 - e - t : e;
             }
             function Ce(e, t) {
-              (A[e] = t), (L[e] = k.fromStepping(t));
+              (A[e] = t), (k[e] = L.fromStepping(t));
               var n = "translate(" + ye(Ee(t, 0) - z + "%", "0") + ")";
               (h[e].style[s.transformRule] = n), Pe(e), Pe(e + 1);
             }
@@ -1375,23 +1375,23 @@
                 S[e].style[s.transformRule] = r + " " + a;
               }
             }
-            function ke(e, t) {
+            function Le(e, t) {
               return null === e || !1 === e || void 0 === e
                 ? A[t]
                 : ("number" == typeof e && (e = String(e)),
-                  !1 !== (e = s.format.from(e)) && (e = k.toStepping(e)),
+                  !1 !== (e = s.format.from(e)) && (e = L.toStepping(e)),
                   !1 === e || isNaN(e) ? A[t] : e);
             }
-            function Le(e, t, n) {
+            function ke(e, t, n) {
               var i = p(e),
                 r = void 0 === A[0];
               (t = void 0 === t || t),
                 s.animate && !r && d(P, s.cssClasses.tap, s.animationDuration),
                 M.forEach(function (e) {
-                  Te(e, ke(i[e], e), !0, !1, n);
+                  Te(e, Le(i[e], e), !0, !1, n);
                 });
               var a = 1 === M.length ? 0 : 1;
-              if (r && k.hasNoSize() && ((n = !0), (A[0] = 0), M.length > 1)) {
+              if (r && L.hasNoSize() && ((n = !0), (A[0] = 0), M.length > 1)) {
                 var o = 100 / (M.length - 1);
                 M.forEach(function (e) {
                   A[e] = e * o;
@@ -1407,17 +1407,17 @@
                 });
             }
             function Ae(e) {
-              Le(s.start, e);
+              ke(s.start, e);
             }
             function Me(e, t, s, n) {
               if (!((e = Number(e)) >= 0 && e < M.length))
                 throw new Error("noUiSlider: invalid handle number, got: " + e);
-              Te(e, ke(t, e), !0, !0, n), be("update", e), s && be("set", e);
+              Te(e, Le(t, e), !0, !0, n), be("update", e), s && be("set", e);
             }
             function Oe(e) {
               if ((void 0 === e && (e = !1), e))
-                return 1 === L.length ? L[0] : L.slice(0);
-              var t = L.map(s.format.to);
+                return 1 === k.length ? k[0] : k.slice(0);
+              var t = k.map(s.format.to);
               return 1 === t.length ? t[0] : t;
             }
             function $e() {
@@ -1435,8 +1435,8 @@
             }
             function _e(e) {
               var t = A[e],
-                n = k.getNearbySteps(t),
-                i = L[e],
+                n = L.getNearbySteps(t),
+                i = k[e],
                 r = n.thisStep.step,
                 a = null;
               if (s.snap)
@@ -1452,7 +1452,7 @@
                     ? n.thisStep.step
                     : !1 !== n.stepBefore.step && i - n.stepBefore.highestStep),
                 100 === t ? (r = null) : 0 === t && (a = null);
-              var o = k.countStepDecimals();
+              var o = L.countStepDecimals();
               return (
                 null !== r && !1 !== r && (r = Number(r.toFixed(o))),
                 null !== a && !1 !== a && (a = Number(a.toFixed(o))),
@@ -1483,20 +1483,20 @@
               r.forEach(function (t) {
                 void 0 !== e[t] && (s[t] = a[t]);
               }),
-                (k = a.spectrum),
+                (L = a.spectrum),
                 (s.margin = a.margin),
                 (s.limit = a.limit),
                 (s.padding = a.padding),
                 s.pips ? ee(s.pips) : Z(),
                 s.tooltips ? W() : U(),
                 (A = []),
-                Le(i(e.start) ? e.start : n, t);
+                ke(i(e.start) ? e.start : n, t);
             }
             function Ie() {
               (c = F(P)),
                 q(s.connect, c),
                 fe(s.events),
-                Le(s.start),
+                ke(s.start),
                 s.pips && ee(s.pips),
                 s.tooltips && W(),
                 Y();
@@ -1508,7 +1508,7 @@
               on: me,
               off: ve,
               get: Oe,
-              set: Le,
+              set: ke,
               setHandle: Me,
               reset: Ae,
               __moveHandles: function (e, t, s) {
@@ -1735,7 +1735,7 @@
                           x,
                           T,
                           P = r(p),
-                          k = m
+                          L = m
                             ? n
                             : (function (t, s, n, r) {
                                 var a = 0;
@@ -1761,11 +1761,11 @@
                                 ),
                                 u.clip
                               ),
-                          L = k - v,
+                          k = L - v,
                           A = i(),
                           M = 0,
                           O =
-                            ((b = L),
+                            ((b = k),
                             (y = (w = u).speedAsDuration
                               ? w.speed
                               : Math.abs((b / 1e3) * w.speed)),
@@ -1780,7 +1780,7 @@
                               (M += t - S),
                               (C =
                                 v +
-                                L *
+                                k *
                                   ((i = E =
                                     1 < (E = 0 === O ? 0 : M / O) ? 1 : E),
                                   "easeInQuad" === (s = u).easing &&
@@ -1835,7 +1835,7 @@
                                     o("scrollStop", u, n, l),
                                     !(h = S = null)
                                   );
-                              })(C, k) ||
+                              })(C, L) ||
                                 ((h = e.requestAnimationFrame($)), (S = t));
                           };
                         0 === e.pageYOffset && e.scrollTo(0, 0),
@@ -1856,7 +1856,7 @@
                               )),
                           "matchMedia" in e &&
                           e.matchMedia("(prefers-reduced-motion)").matches
-                            ? a(n, Math.floor(k), !1)
+                            ? a(n, Math.floor(L), !1)
                             : (o("scrollStart", u, n, l),
                               f.cancelScroll(!0),
                               e.requestAnimationFrame($));
@@ -2720,16 +2720,18 @@
       }
       class C extends Array {
         constructor(e) {
-          super(...(e || [])),
-            (function (e) {
-              const t = e.__proto__;
-              Object.defineProperty(e, "__proto__", {
-                get: () => t,
-                set(e) {
-                  t.__proto__ = e;
-                },
-              });
-            })(this);
+          "number" == typeof e
+            ? super(e)
+            : (super(...(e || [])),
+              (function (e) {
+                const t = e.__proto__;
+                Object.defineProperty(e, "__proto__", {
+                  get: () => t,
+                  set(e) {
+                    t.__proto__ = e;
+                  },
+                });
+              })(this));
         }
       }
       function x(e = []) {
@@ -2786,40 +2788,40 @@
         );
       }
       P.fn = C.prototype;
-      const k = "resize scroll".split(" ");
-      function L(e) {
+      const L = "resize scroll".split(" ");
+      function k(e) {
         return function (...t) {
           if (void 0 === t[0]) {
             for (let t = 0; t < this.length; t += 1)
-              k.indexOf(e) < 0 &&
+              L.indexOf(e) < 0 &&
                 (e in this[t] ? this[t][e]() : P(this[t]).trigger(e));
             return this;
           }
           return this.on(e, ...t);
         };
       }
-      L("click"),
-        L("blur"),
-        L("focus"),
-        L("focusin"),
-        L("focusout"),
-        L("keyup"),
-        L("keydown"),
-        L("keypress"),
-        L("submit"),
-        L("change"),
-        L("mousedown"),
-        L("mousemove"),
-        L("mouseup"),
-        L("mouseenter"),
-        L("mouseleave"),
-        L("mouseout"),
-        L("mouseover"),
-        L("touchstart"),
-        L("touchend"),
-        L("touchmove"),
-        L("resize"),
-        L("scroll");
+      k("click"),
+        k("blur"),
+        k("focus"),
+        k("focusin"),
+        k("focusout"),
+        k("keyup"),
+        k("keydown"),
+        k("keypress"),
+        k("submit"),
+        k("change"),
+        k("mousedown"),
+        k("mousemove"),
+        k("mouseup"),
+        k("mouseenter"),
+        k("mouseleave"),
+        k("mouseout"),
+        k("mouseover"),
+        k("touchstart"),
+        k("touchend"),
+        k("touchmove"),
+        k("resize"),
+        k("scroll");
       const A = {
         addClass: function (...e) {
           const t = x(e.map((e) => e.split(" ")));
@@ -6490,12 +6492,6 @@
               navigation: {
                 nextEl: ".slider-about__nav .slider-about__item-next",
                 prevEl: ".slider-about__nav .slider-about__item-prev",
-              },
-              breakpoints: {
-                320: { slidesPerView: 3, spaceBetween: 20 },
-                768: { slidesPerView: 4, spaceBetween: 20 },
-                992: { slidesPerView: 4, spaceBetween: 20 },
-                1268: { slidesPerView: 4, spaceBetween: 30 },
               },
               on: {},
             }),
