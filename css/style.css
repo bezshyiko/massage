@@ -1497,6 +1497,7 @@ body.popup-show::after {
 }
 .main-block__photo {
   position: relative;
+  bottom: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -1552,6 +1553,8 @@ body.popup-show::after {
   }
 }
 .main-block__photo img {
+  position: relative;
+  bottom: 0;
   padding: 70px 0px 0px 0px;
   align-self: end;
   vertical-align: bottom;
@@ -1572,7 +1575,7 @@ body.popup-show::after {
   }
 }
 @media (min-height: 62.5em) {
-  .main-block__photo::before {
+  .main-block__photo::after {
     bottom: 30%;
   }
 }
@@ -1582,7 +1585,7 @@ body.popup-show::after {
     margin: -15px 0px 10px 0px;
     border-bottom: 3px solid #ad8330;
   }
-  .main-block__photo::before {
+  .main-block__photo::after {
     bottom: 50%;
   }
 }
