@@ -1496,6 +1496,7 @@ body.popup-show::after {
   }
 }
 .main-block__photo {
+  display: flex;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -1550,9 +1551,6 @@ body.popup-show::after {
   }
 }
 .main-block__photo img {
-  margin: 0 auto;
-  position: absolute;
-  bottom: 0;
   padding: 70px 0px 0px 0px;
   vertical-align: bottom;
 }
