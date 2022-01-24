@@ -1483,7 +1483,7 @@ body.popup-show::after {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   overflow: hidden;
   transform: translate(150px, 0px);
   opacity: 0;
