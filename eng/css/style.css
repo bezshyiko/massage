@@ -829,8 +829,6 @@ body.popup-show::after {
 }
 .header__lang a:first-child {
   padding: 0px 5px 0px 0px;
-  color: white;
-  text-decoration: underline;
 }
 .header__lang a:first-child::after {
   content: "";
@@ -842,13 +840,14 @@ body.popup-show::after {
   background-color: #C3C3C3;
 }
 .header__lang a:last-child {
-  cursor: default;
-  color: #ad8330;
-  text-decoration: underline;
+   cursor: default;
+   color: #ad8330;
+   text-decoration: underline;
   padding: 0px 0px 0px 2px;
 }
-.header__lang a:last-child:hover {
-
+.header__lang a:first-child:hover {
+  color: white;
+  text-decoration: underline;
 }
 @media (max-width: 29.99875em) {
   .header__lang {
@@ -1567,6 +1566,7 @@ body.popup-show::after {
   }
 }
 .main-block__btn {
+   min-width: 100px;
   transform: scale(0);
   opacity: 0;
   transition: transform 1.1s ease, opacity 0.8s ease;

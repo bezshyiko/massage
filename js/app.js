@@ -2040,7 +2040,7 @@
             this.options.init && this.initPopups();
         }
         initPopups() {
-          this.popupLogging("Проснулся"), this.eventsPopup();
+          this.eventsPopup();
         }
         eventsPopup() {
           document.addEventListener(
@@ -6494,10 +6494,10 @@
                 prevEl: ".slider-about__nav .slider-about__item-prev",
               },
               breakpoints: {
-                320: { slidesPerView: 2, spaceBetween: 20 },
-                768: { slidesPerView: 3, spaceBetween: 20 },
-                992: { slidesPerView: 4, spaceBetween: 20 },
-                1268: { slidesPerView: 4, spaceBetween: 30 },
+                320: { slidesPerView: 2, spaceBetween: 10 },
+                768: { slidesPerView: 3, spaceBetween: 10 },
+                992: { slidesPerView: 4, spaceBetween: 15 },
+                1268: { slidesPerView: 4, spaceBetween: 20 },
               },
               on: {},
             }),
