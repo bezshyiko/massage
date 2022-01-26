@@ -828,10 +828,9 @@ body.popup-show::after {
   position: relative;
 }
 .header__lang a:first-child {
-  cursor: default;
-  color: #ad8330;
-  text-decoration: underline;
   padding: 0px 5px 0px 0px;
+  color: white;
+  text-decoration: underline;
 }
 .header__lang a:first-child::after {
   content: "";
@@ -843,11 +842,13 @@ body.popup-show::after {
   background-color: #C3C3C3;
 }
 .header__lang a:last-child {
+  cursor: default;
+  color: #ad8330;
+  text-decoration: underline;
   padding: 0px 0px 0px 2px;
 }
 .header__lang a:last-child:hover {
-  color: white;
-  text-decoration: underline;
+
 }
 @media (max-width: 29.99875em) {
   .header__lang {
