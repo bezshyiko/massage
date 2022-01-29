@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220129141107">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220129170601">
 	<link rel="shortcut icon" href="ico.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +25,8 @@
 							<li><a href="#" data-goto=".main-block" class="menu__link link-1 _icon-home _anim-items">Головна</a></li>
 							<li><a href="#" data-goto=".about" class="menu__link link-2 _icon-user _anim-items">Про мене</a></li>
 							<li><a href="#" data-goto=".services" class="menu__link link-3 _icon-service _anim-items">Послуги</a></li>
-							<li><a href="#" data-goto=".footer" class="menu__link link-4 _icon-phone1 _anim-items">Контакти</a></li>
+							<li><a href="#" data-goto=".contacts" class="menu__link link-4 _icon-phone1 _anim-items">Контакти</a></li>
+							<li><a href="#" data-goto=".gallery" class="menu__link link-4 _icon-phone1 _anim-items">Галерея</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -106,7 +107,9 @@
 					<h2 class="services__title title _anim-items">Послуги</h2>
 					<div class="services__items items-services">
 						<div class="items-services__card _anim-items card-1">
-							<div class="items-services__icon _icon-hand"></div>
+							<div class="items-services__icon">
+								<img src="img/icons/hand.svg" alt="">
+							</div>
 							<h3 class="items-services__title">Краніосакральна терапія</h3>
 							<div data-spollers class="items-services__spollers spollers">
 								<div class="spollers__item">
@@ -152,7 +155,9 @@
 							<button data-popup="#kst" class="items-services__btn button">Замовити консультацію</button>
 						</div>
 						<div class="items-services__card _anim-items card-2">
-							<div class="items-services__icon _icon-spine2"></div>
+							<div class="items-services__icon">
+								<img src="img/icons/spine.svg" alt="">
+							</div>
 							<h3 class="items-services__title">Остеопатія</h3>
 							<div data-spollers class="items-services__spollers spollers">
 								<div class="spollers__item">
@@ -196,7 +201,9 @@
 							<button data-popup="#kst" class="items-services__btn button">Замовити консультацію</button>
 						</div>
 						<div class="items-services__card _anim-items card-3">
-							<div class="items-services__icon _icon-massage"></div>
+							<div class="items-services__icon">
+								<img src="img/icons/massage.svg" alt="">
+							</div>
 							<h3 class="items-services__title">Класичний масаж</h3>
 							<div data-spollers class="items-services__spollers spollers">
 								<div class="spollers__item">
@@ -242,7 +249,9 @@
 							<button data-popup="#kst" class="items-services__btn button">Замовити консультацію</button>
 						</div>
 						<div class="items-services__card _anim-items card-4">
-							<div class="items-services__icon _icon-coronavirus"></div>
+							<div class="items-services__icon">
+								<img src="img/icons/coronavirus.svg" alt="">
+							</div>
 							<h3 class="items-services__title">Відновлення після коронавірусу</h3>
 							<div data-spollers class="items-services__spollers spollers">
 								<div class="spollers__item">
@@ -290,7 +299,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__block contacts">
+			<section data-watch="navigator" class="page__block contacts">
 				<div class="contacts__container">
 					<h2 class="contacts__title title _anim-items">Контакти</h2>
 					<div class="contacts__body">
@@ -323,11 +332,11 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__block gallery">
+			<section data-watch="navigator" class="page__block gallery">
 				<h2 class="gallery__title title _anim-items">Галерея</h2>
 				<div class="gallery__container">
 					<div class="gallery__body">
-						<div class="gallery__photo photo-gallery">
+						<div class="gallery__photo photo-gallery _anim-items">
 							<div data-gallery class="photo-gallery__items">
 								<a class="photo-gallery__item" href="img/Gallery/1.jpg">
 									<picture><source srcset="img/Gallery/1.webp" type="image/webp"><img src="img/Gallery/1.jpg" /></picture>
@@ -352,7 +361,7 @@
 								</a>
 							</div>
 						</div>
-						<div class="gallery__video video-gallery">
+						<div class="gallery__video video-gallery _anim-items">
 							<div data-gallery class="video-gallery__items">
 								<a class="video-gallery__item _icon-play" data-src="https://youtu.be/SFXio-sN9Zo">
 									<picture><source srcset="img/Gallery/video1.webp" type="image/webp"><img class="" src="img/Gallery/video1.jpg" /></picture>
@@ -389,12 +398,13 @@
 						</a>
 					</div>
 					<div class="footer__column">
-						<div href="" class="footer__nav _anim-items">
+						<div class="footer__nav _anim-items">
 							<ul class="footer__list">
 								<li><a href="#" data-goto=".main-block" class="menu__link">Головна</a></li>
 								<li><a href="#" data-goto=".about" class="menu__link">Про мене</a></li>
 								<li><a href="#" data-goto=".services" class="menu__link">Послуги</a></li>
 								<li><a href="#" data-goto=".contacts" class="menu__link">Контакти</a></li>
+								<li><a href="#" data-goto=".gallery" class="menu__link">Галерея</a></li>
 							</ul>
 						</div>
 					</div>
@@ -602,7 +612,7 @@
 		</div>
 	</div>
 
-	<script src="js/app.min.js?_v=20220129141107"></script>
+	<script src="js/app.min.js?_v=20220129170601"></script>
 
 
 </body>
