@@ -1695,6 +1695,21 @@ body.popup-show::after {
   object-fit: cover;
   object-position: center;
 }
+@media (min-width: 91.875em) {
+  .slider-about__slide img {
+    height: 23.75rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 91.875em) {
+  .slider-about__slide img {
+    height: clamp( 11.25rem , 7.7717391304rem  +  17.3913043478vw , 23.75rem );
+  }
+}
+@media (max-width: 20em) {
+  .slider-about__slide img {
+    height: 11.25rem;
+  }
+}
 .slider-about .top-photo {
   align-self: flex-end;
 }
