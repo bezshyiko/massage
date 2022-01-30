@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220130174132">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220123160623">
 	<link rel="shortcut icon" href="ico.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
 		<header class="header">
 			<div class="header__container">
 				<a href="index.html" class="header__logo">
-					<picture><source srcset="img/Logo.webp" type="image/webp"><img class="_anim-items" src="img/Logo.png" alt=""></picture>
+					<img class="_anim-items" src="img/Logo.png" alt="">
 				</a>
 				<div class="header__menu menu">
 					<nav class="menu__body">
@@ -25,14 +25,9 @@
 							<li><a href="#" data-goto=".main-block" class="menu__link link-1 _icon-home _anim-items">Головна</a></li>
 							<li><a href="#" data-goto=".about" class="menu__link link-2 _icon-user _anim-items">Про мене</a></li>
 							<li><a href="#" data-goto=".services" class="menu__link link-3 _icon-service _anim-items">Послуги</a></li>
-							<li><a href="#" data-goto=".contacts" class="menu__link link-4 _icon-phone1 _anim-items">Контакти</a></li>
-							<li><a href="#" data-goto=".gallery" class="menu__link link-5 _icon-gallery _anim-items">Галерея</a></li>
+							<li><a href="#" data-goto=".footer" class="menu__link link-4 _icon-phone1 _anim-items">Контакти</a></li>
 						</ul>
 					</nav>
-				</div>
-				<div class="header__lang">
-					<a href="">УКР</a>
-					<a href="">ENG</a>
 				</div>
 				<div class="header__feedback _anim-items">
 					<button data-popup="#header" class="button">Зворотний зв'язок</button>
@@ -48,22 +43,20 @@
 			<section data-watch="navigator" data-fullscreen="true" class="page__block main-block">
 				<div class="main-block__container">
 					<div class="main-block__column">
-						<div class="main-block__content">
-							<div class="main-block__title _anim-items">less is more</div>
-							<div class="main-block__text _anim-items">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus cum aspernatur voluptatem commodi minima labore ipsam accusantium. Officia porro quis laudantium veniam nihil eius nostrum? Expedita eveniet dicta autem laudantium.
-							</div>
-							<button data-goto=".about" class="main-block__btn button _anim-items">Дізнатись більше</button>
-							<div class="main-block__social social">
-								<a href="" class="social__facebook _anim-items _icon-Facebook"></a>
-								<a href="" class="social__instagram _anim-items _icon-Instagram"></a>
-								<a href="" class="social__telegram _anim-items _icon-Telegram"></a>
-								<a href="" class="social__viber _anim-items _icon-Viber"></a>
-							</div>
+						<div class="main-block__title _anim-items">less is more</div>
+						<div class="main-block__text _anim-items">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus cum aspernatur voluptatem commodi minima labore ipsam accusantium. Officia porro quis laudantium veniam nihil eius nostrum? Expedita eveniet dicta autem laudantium.
+						</div>
+						<button data-goto=".about" class="main-block__btn button _anim-items">Дізнатись більше</button>
+						<div class="main-block__social social">
+							<a href="" class="social__facebook _anim-items _icon-Facebook"></a>
+							<a href="" class="social__instagram _anim-items _icon-Instagram"></a>
+							<a href="" class="social__telegram _anim-items _icon-Telegram"></a>
+							<a href="" class="social__viber _anim-items _icon-Viber"></a>
 						</div>
 					</div>
 					<div class="main-block__column">
 						<div class="main-block__photo _anim-items">
-							<picture><source srcset="img/MainBlock/Ihor.webp" type="image/webp"><img src="img/MainBlock/Ihor.png" alt=""></picture>
+							<img src="img/MainBlock/Ihor.png" alt="">
 						</div>
 					</div>
 				</div>
@@ -83,25 +76,17 @@
 						</div>
 						<div class="about__slider slider-about _anim-items">
 							<div class="slider-about__body body__swiper">
-								<div class="slider-about__slide  top-photo">
-									<picture><source srcset="img/About/1.webp" type="image/webp"><img class="" src="img/About/1.jpg" alt=""></picture>
-								</div>
-								<div class="slider-about__slide">
-									<picture><source srcset="img/About/2.webp" type="image/webp"><img class="" src="img/About/2.jpg" alt=""></picture>
-								</div>
-								<div class="slider-about__slide  top-photo">
-									<picture><source srcset="img/About/3.webp" type="image/webp"><img class="" src="img/About/3.jpg" alt=""></picture>
-								</div>
-								<div class="slider-about__slide">
-									<picture><source srcset="img/About/4.webp" type="image/webp"><img class="" src="img/About/4.jpg" alt=""></picture>
-								</div>
-								<div class="slider-about__slide top-photo">
-									<picture><source srcset="img/About/5.webp" type="image/webp"><img class="" src="img/About/5.jpg" alt=""></picture>
-								</div>
-								<div class="slider-about__slide">
-									<picture><source srcset="img/About/1.webp" type="image/webp"><img class="" src="img/About/1.jpg" alt=""></picture>
-								</div>
+								<img class="slider-about__slide top-photo" src="img/About/1.jpg" alt="">
+								<img class="slider-about__slide bottom-photo" src="img/About/2.jpg" alt="">
+								<img class="slider-about__slide top-photo" src="img/About/3.jpg" alt="">
+								<img class="slider-about__slide bottom-photo" src="img/About/4.jpg" alt="">
+								<img class="slider-about__slide top-photo" src="img/About/5.jpg" alt="">
 							</div>
+							<!--<div class="slider-about__dots"></div>
+                           <div class="slider-about__nav">
+                              <button class="slider-about__item-prev _icon-arrow-long"></button>
+                              <button class="slider-about__item-next _icon-arrow-long"></button>
+                           </div>-->
 						</div>
 					</div>
 				</div>
@@ -111,9 +96,7 @@
 					<h2 class="services__title title _anim-items">Послуги</h2>
 					<div class="services__items items-services">
 						<div class="items-services__card _anim-items card-1">
-							<div class="items-services__icon">
-								<img src="img/icons/hand.svg" alt="">
-							</div>
+							<div class="items-services__icon _icon-hand"></div>
 							<h3 class="items-services__title">Краніосакральна терапія</h3>
 							<div data-spollers class="items-services__spollers spollers">
 								<div class="spollers__item">
@@ -148,20 +131,11 @@
 										<li>онкологічні патології головного мозку;</li>
 									</ul>
 								</div>
-								<div class="spollers__item">
-									<div data-spoller class="spollers__title">Ціна за послугу</div>
-									<ul class="spollers__body">
-										<li>30хв - 300грн</li>
-										<li>60хв - 600грн;</li>
-									</ul>
-								</div>
 							</div>
 							<button data-popup="#kst" class="items-services__btn button">Замовити консультацію</button>
 						</div>
 						<div class="items-services__card _anim-items card-2">
-							<div class="items-services__icon">
-								<img src="img/icons/spine.svg" alt="">
-							</div>
+							<div class="items-services__icon _icon-spine2"></div>
 							<h3 class="items-services__title">Остеопатія</h3>
 							<div data-spollers class="items-services__spollers spollers">
 								<div class="spollers__item">
@@ -194,20 +168,11 @@
 										<li>гострі розлади психіки;</li>
 									</ul>
 								</div>
-								<div class="spollers__item">
-									<div data-spoller class="spollers__title">Ціна за послугу</div>
-									<ul class="spollers__body">
-										<li>30хв - 300грн</li>
-										<li>60хв - 600грн;</li>
-									</ul>
-								</div>
 							</div>
 							<button data-popup="#kst" class="items-services__btn button">Замовити консультацію</button>
 						</div>
 						<div class="items-services__card _anim-items card-3">
-							<div class="items-services__icon">
-								<img src="img/icons/massage.svg" alt="">
-							</div>
+							<div class="items-services__icon _icon-massage"></div>
 							<h3 class="items-services__title">Класичний масаж</h3>
 							<div data-spollers class="items-services__spollers spollers">
 								<div class="spollers__item">
@@ -242,20 +207,11 @@
 										<li>онкологічні патології головного мозку;</li>
 									</ul>
 								</div>
-								<div class="spollers__item">
-									<div data-spoller class="spollers__title">Ціна за послугу</div>
-									<ul class="spollers__body">
-										<li>30хв - 300грн</li>
-										<li>60хв - 600грн;</li>
-									</ul>
-								</div>
 							</div>
 							<button data-popup="#kst" class="items-services__btn button">Замовити консультацію</button>
 						</div>
 						<div class="items-services__card _anim-items card-4">
-							<div class="items-services__icon">
-								<img src="img/icons/coronavirus.svg" alt="">
-							</div>
+							<div class="items-services__icon _icon-coronavirus"></div>
 							<h3 class="items-services__title">Відновлення після коронавірусу</h3>
 							<div data-spollers class="items-services__spollers spollers">
 								<div class="spollers__item">
@@ -290,20 +246,13 @@
 										<li>онкологічні патології головного мозку;</li>
 									</ul>
 								</div>
-								<div class="spollers__item">
-									<div data-spoller class="spollers__title">Ціна за послугу</div>
-									<ul class="spollers__body">
-										<li>30хв - 300грн</li>
-										<li>60хв - 600грн;</li>
-									</ul>
-								</div>
 							</div>
 							<button data-popup="#kst" class="items-services__btn button">Замовити консультацію</button>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section data-watch="navigator" class="page__block contacts">
+			<section class="page__block contacts">
 				<div class="contacts__container">
 					<h2 class="contacts__title title _anim-items">Контакти</h2>
 					<div class="contacts__body">
@@ -336,50 +285,6 @@
 					</div>
 				</div>
 			</section>
-			<section data-watch="navigator" class="page__block gallery">
-				<h2 class="gallery__title title _anim-items">Галерея</h2>
-				<div class="gallery__container">
-					<div class="gallery__body">
-						<div class="gallery__photo photo-gallery _anim-items">
-							<div data-gallery class="photo-gallery__items">
-								<a class="photo-gallery__item" href="img/Gallery/1.jpg">
-									<picture><source srcset="img/Gallery/1.webp" type="image/webp"><img src="img/Gallery/1.jpg" /></picture>
-								</a>
-								<a class="photo-gallery__item" href="img/Gallery/2.jpg">
-									<picture><source srcset="img/Gallery/2.webp" type="image/webp"><img src="img/Gallery/2.jpg" /></picture>
-								</a>
-								<a class="photo-gallery__item" href="img/Gallery/3.jpg">
-									<picture><source srcset="img/Gallery/3.webp" type="image/webp"><img src="img/Gallery/3.jpg" /></picture>
-								</a>
-								<a class="photo-gallery__item" href="img/Gallery/4.jpg">
-									<picture><source srcset="img/Gallery/4.webp" type="image/webp"><img src="img/Gallery/4.jpg" /></picture>
-								</a>
-								<a class="photo-gallery__item" href="img/Gallery/5.jpg">
-									<picture><source srcset="img/Gallery/5.webp" type="image/webp"><img src="img/Gallery/5.jpg" /></picture>
-								</a>
-								<a class="photo-gallery__item" href="img/Gallery/6.jpg">
-									<picture><source srcset="img/Gallery/6.webp" type="image/webp"><img src="img/Gallery/6.jpg" /></picture>
-								</a>
-								<a class="photo-gallery__item" href="img/Gallery/3.jpg">
-									<picture><source srcset="img/Gallery/3.webp" type="image/webp"><img src="img/Gallery/3.jpg" /></picture>
-								</a>
-							</div>
-						</div>
-						<div class="gallery__video video-gallery _anim-items">
-							<div data-gallery class="video-gallery__items">
-								<a class="video-gallery__item _icon-play" data-src="https://youtu.be/SFXio-sN9Zo">
-									<picture><source srcset="img/Gallery/video1.webp" type="image/webp"><img class="" src="img/Gallery/video1.jpg" /></picture>
-									<h4 class="video-gallery__title">3 вправи від головного болю</h4>
-								</a>
-								<a class="video-gallery__item _icon-play" data-src="https://youtu.be/SFXio-sN9Zo">
-									<picture><source srcset="img/Gallery/video2.webp" type="image/webp"><img class="" src="img/Gallery/video2.jpg" /></picture>
-									<h4 class="video-gallery__title">3 вправи від головного болю</h4>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -402,13 +307,12 @@
 						</a>
 					</div>
 					<div class="footer__column">
-						<div class="footer__nav _anim-items">
+						<div href="" class="footer__nav _anim-items">
 							<ul class="footer__list">
 								<li><a href="#" data-goto=".main-block" class="menu__link">Головна</a></li>
 								<li><a href="#" data-goto=".about" class="menu__link">Про мене</a></li>
 								<li><a href="#" data-goto=".services" class="menu__link">Послуги</a></li>
 								<li><a href="#" data-goto=".contacts" class="menu__link">Контакти</a></li>
-								<li><a href="#" data-goto=".gallery" class="menu__link">Галерея</a></li>
 							</ul>
 						</div>
 					</div>
@@ -476,7 +380,7 @@
 							<div class="form__title">Як краще з вами зв'язатись?</div>
 							<div class="form__options options">
 								<div class="options__item _icon-phone1">
-									<input checked id="telephone" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
+									<input id="telephone" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="telephone" class="options__label "></label>
 								</div>
 								<div class="options__item _icon-Viber">
@@ -516,7 +420,7 @@
 							<div class="form__title">Як краще з вами зв'язатись?</div>
 							<div class="form__options options">
 								<div class="options__item _icon-phone1">
-									<input checked id="tel2" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
+									<input id="tel2" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="tel2" class="options__label "></label>
 								</div>
 								<div class="options__item _icon-Viber">
@@ -556,7 +460,7 @@
 							<div class="form__title">Як краще з вами зв'язатись?</div>
 							<div class="form__options options">
 								<div class="options__item _icon-phone1">
-									<input checked id="tel3" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
+									<input id="tel3" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="tel3" class="options__label "></label>
 								</div>
 								<div class="options__item _icon-Viber">
@@ -596,7 +500,7 @@
 							<div class="form__title">Як краще з вами зв'язатись?</div>
 							<div class="form__options options">
 								<div class="options__item _icon-phone1">
-									<input checked id="tel4" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
+									<input id="tel4" type="radio" name=" " data-error="Помилка" data-value="" class="options__input">
 									<label for="tel4" class="options__label "></label>
 								</div>
 								<div class="options__item _icon-Viber">
@@ -616,7 +520,7 @@
 		</div>
 	</div>
 
-	<script src="js/app.min.js?_v=20220130174132"></script>
+	<script src="js/app.min.js?_v=20220123160623"></script>
 
 
 </body>
