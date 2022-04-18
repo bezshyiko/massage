@@ -838,7 +838,7 @@ body.popup-show::after {
     background-color: #151515;
     position: fixed;
     top: 0;
-    right: -60%;
+    right: -110%;
     z-index: 2;
     overflow: auto;
     transition: all 0.6s;
